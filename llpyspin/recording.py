@@ -40,7 +40,7 @@ def locate_ffmpeg_binary():
     global FFMPEG_BINARY_FILEPATH
 
     # check if ffmpeg is installed
-    if sys.platform == "linux" or platform == "linux2":
+    if sys.platform == "linux" or sys.platform == "linux2":
         p = sp.Popen('which ffmpeg', stdout=sp.PIPE, shell=True)
     elif sys.platform == "win32":
         p = sp.Popen('where ffmpeg', stdout=sp.PIPE, shell=True)
