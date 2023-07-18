@@ -515,19 +515,19 @@ class DummyCameraPointer():
                 else:
                     self.val = val
 
-        class StreamBufferCountMode(DummyProperty):
+         #depricated class needs updating
+         #class StreamBufferCountMode(DummyProperty):
+         #   def __init__(self, parent, min=None, max=None, val=PySpin.StreamBufferCountMode_Auto):
+         #       super().__init__(parent, min, max, val)
 
-            def __init__(self, parent, min=None, max=None, val=PySpin.StreamBufferCountMode_Auto):
-                super().__init__(parent, min, max, val)
-
-            def SetValue(self, val):
-                super().SetValue()
-                if val not in [
-                    PySpin.StreamBufferCountMode_Auto, PySpin.StreamBufferCountMode_Manual
-                ]:
-                    raise PySpin.SpinnakerException(f'{val} is not a valid value')
-                else:
-                    self.val = val
+         #   def SetValue(self, val):
+         #       super().SetValue()
+         #       if val not in [
+         #           PySpin.StreamBufferCountMode_Auto, PySpin.StreamBufferCountMode_Manual
+         #       ]:
+         #           raise PySpin.SpinnakerException(f'{val} is not a valid value')
+         #       else:
+         #           self.val = val
 
         class StreamBufferCountManual(DummyProperty):
 
